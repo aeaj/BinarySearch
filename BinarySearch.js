@@ -49,6 +49,9 @@ function startComputerGuesses() {
     makeComputerGuess();
 }
 
+//hello
+//hello world
+
 function makeComputerGuess() {
     computerGuess = Math.floor((min + max) / 2);
     console.log(`Computer guesses: ${computerGuess}. Is your number higher, lower, or correct?`);
