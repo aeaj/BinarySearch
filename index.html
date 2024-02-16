@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Guess The Number</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Guess The Number</h1>
+    <div id="game-intro">
+        <p>Welcome to the Guess the Number Game. 
+            <br>Guess the number between 1 and 100!</p>
+        <button id="user-guesses">I'll guess the number</button>
+        <button id="computer-guesses">Let the computer guess</button>
+    </div>
+
+    <div id="user-guess-section" style="display:none;">
+        <p>Guess the number the computer is thinking of.</p>
+        <form id="user-guess-form">
+            <input type="number" name="guess" min="1" max="100" required>
+            <input type="submit" value="Submit Guess">
+        </form>
+        <div id="feedback"></div>
+        <ul id="guess-list"></ul>
+    </div>
+
+    <div id="computer-guess-section" style="display:none;">
+        <p id="computer-guess-prompt">Is your number ...?</p>
+        <button onclick="provideFeedback('too low')">Too Low</button>
+        <button onclick="provideFeedback('correct')">Correct</button>
+        <button onclick="provideFeedback('too high')">Too High</button> 
+        <div id="computerFeedback"></div>
+        <button id="computer-guesses">Restart the game</button>
+    </div>
+
+    <script src="BinarySearch.js"></script>
+</body>
+</html>
